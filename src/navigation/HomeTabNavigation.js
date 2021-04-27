@@ -19,7 +19,7 @@ function HomeTabNavigation(props) {
         component={ExploreNavigator}
         options={{
           tabBarIcon: ({color}) => (
-            <FontAwesome name="search" size={25} color={color} />
+            <Fontisto name="search" size={25} color={color} />
           ),
         }}
       />
