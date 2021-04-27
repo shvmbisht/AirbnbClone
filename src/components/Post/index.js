@@ -3,6 +3,8 @@ import {Image, Text, View} from 'react-native';
 import styles from './styles';
 
 function Post(props) {
+  let {bed, bedroom, oldPrice, newPrice, totalPrice, title} = props.post;
+  console.log('POST', props);
   return (
     <View style={styles.container}>
       <Image
@@ -12,21 +14,17 @@ function Post(props) {
             'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/1.jpg',
         }}
       />
-      <Text style={styles.bedrooms}> 1 bed 1 bedroom</Text>
+      <Text style={styles.bedrooms}>
+        {bed} bed {bedroom} bedroom
+      </Text>
       <Text style={styles.description} numberOfLines={2}>
-        My place is close to family-friendly activities. You’ll love my place
-        because of the neighborhood, the light, the coziness . It is a place for
-        you to relax, unwind, and take a break from the stress of everyday life
-        – ideal for nature lovers and honeymooners. Spanning over two acres, the
-        entire area is full of greenery and free of all pollution. My place is
-        good for couples, solo adventurers, business travelers, families (with
-        kids), and big groups.{' '}
+        {title}
       </Text>
       <Text style={styles.prices}>
-        <Text style={styles.oldPrice}>$46</Text>
-        <Text style={styles.newPrice}> $38 </Text>/ night
+        <Text style={styles.oldPrice}>${oldPrice}</Text>
+        <Text style={styles.newPrice}> ${newPrice} </Text>/ Night
       </Text>
-      <Text style={styles.totalPrice}>$230 Total</Text>
+      <Text style={styles.totalPrice}>${totalPrice} Total</Text>
     </View>
   );
 }
