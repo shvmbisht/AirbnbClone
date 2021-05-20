@@ -1,11 +1,14 @@
 import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
   container: {
-    margin: 10,
+    padding: 10,
+    height: '100%',
+    backgroundColor: '#fff',
   },
   textInput: {
     fontSize: 20,
     marginBottom: 20,
+    marginTop: 50,
   },
   iconContainer: {
     backgroundColor: '#e7e7e7',
